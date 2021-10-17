@@ -1,0 +1,120 @@
+@import 'base';
+
+main {
+   width: 945px;
+   height: 420px;
+   margin: auto;
+   @include flex(row, center, center);
+   gap: 20px;
+   .heading {
+      height: 100%;
+      width: calc(25% - 20px);
+   }
+   .profile{
+      height: 70%;
+      z-index: 2;
+      position: relative;
+      background-color: $Blue;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      @include flex(column, space-around, start);
+      img {
+         width: 60px;
+         border: 3px solid #fff;
+         border-radius: 50%;
+      }
+      span{
+         font-size: 13px;
+         color: $Pale-Blue;
+      }
+   }
+   .act{
+      height: 36%;
+      position: relative;
+      top: -6%;
+      background-color: $Dark-blue;
+      color: $Desaturated-blue;
+      font-size: 15px;
+      padding: 20px;
+      border-radius: 10px;
+      @include flex(column, end, null);
+      gap: 10px;
+      & p:hover{
+         cursor: pointer;
+         color: #fff;
+      }
+      p.active{
+         color: #fff;
+      }
+   }
+}
+.cards-container{
+   display: grid;
+   min-width: 708px;
+   width: 75%;
+   height: 100%;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 20px;
+   .card{
+      .card-img{
+         height: 23%;
+         border-radius: 10px;
+         overflow: hidden;
+         img {
+            width: 50px;
+            position: relative;
+            left: calc(100% - 70px);
+            top: -5px;
+         }
+         @each $key, $color in $colors {
+            &.#{$key} {
+               background-color: $color;
+            }
+         }
+      }
+      .card-title{
+         width: 100%;
+         @include flex(row, space-between, center);
+         span {
+            font-size: 24px;
+            cursor: pointer;
+         }
+      }
+      .card-content{
+         position: relative;
+         top: -6%;
+         background-color: $Dark-blue;
+         padding: 20px;
+         height: 83%;
+         border-radius: 10px;
+         color: #fff;
+         transition: 0.5s;
+         @include flex(column, space-evenly, start);
+         h3 {
+            font-size: 36px;
+         }
+         .previous{
+            font-size: 12px;
+            color: $Pale-Blue;
+         }
+         &:hover{
+            background: hsl(235, 46%, 33%);
+         }
+      }
+   }
+}
+.attribution{
+   color: #999;
+   font-size: 12px;
+   text-align: center;
+   font-weight: 300;
+   a {
+      text-decoration: none;
+      transition: 0.2s;
+      font-weight: 500;
+      color: #999;
+  }
+}
+@import 'responsive';

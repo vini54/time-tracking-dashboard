@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+@mixin flex($direction, $justify, $align) {
+   display: flex;
+   flex-direction: $direction;
+   justify-content: $justify;
+   align-items: $align;
+}
+
+$Blue: hsl(246, 80%, 60%);
+
+$colors: (c1: hsl(15, 100%, 70%), c2: hsl(195, 74%, 62%), c3: hsl(348, 100%, 68%), c4: hsl(145, 58%, 55%), c5: hsl(264, 64%, 52%), c6: hsl(43, 84%, 65%));
+
+$Light-red1: hsl(15, 100%, 70%);
+$Soft-blue: hsl(195, 74%, 62%);
+$Light-red2: hsl(348, 100%, 68%);
+$Lime-green: hsl(145, 58%, 55%);
+$Violet: hsl(264, 64%, 52%);
+$Soft-orange: hsl(43, 84%, 65%);
+
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
+
+$Rubik: 'Rubik', sans-serif;
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: $Rubik;
+   font-weight: 400;
+}
+body{
+   width: 100vw;
+   min-height: 100vh;
+   font-size: 18px;
+   background-color: $Very-dark-blue;
+   @include flex(column, space-around , center);
+}
+img {
+   width: 100%;
+}
