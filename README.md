@@ -27,12 +27,12 @@ Users should be able to:
 
 - Full-hd screen
 
-![](.\screenshot\127.0.0.1_5500_index.html.png)
+![](https://raw.githubusercontent.com/vini54/time-tracking-dashboard/main/screenshot/127.0.0.1_5500_index.html.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Front-end Mentor](https://www.frontendmentor.io/solutions/time-tracking-with-sass-and-js-WFd8PpOuH)
+- Live Site URL: [Netlify](https://ecstatic-newton-4796dd.netlify.app/)
 
 ## My process
 
